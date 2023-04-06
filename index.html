@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Serif+JP:wght@200;600&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>ToDo-things</h1>
+        </header>
+
+        <main class="main_content">
+            <div class="monthly_goals">
+
+                <h2 class="goals">Monthly goals</h2>
+                <hr class="division">
+                <p id="currentMonth" class="month"></p>
+
+                <div id="monthItems">
+                    <template id="monthItemTemplate">
+                        <form class="monthItem">
+                            <label for="add-task-btn"></label>
+                            <input type="checkbox">
+                            <input type="text" placeholder="task">
+                        </form>
+                    </template>
+                </div>
+                <input type="button" class="add" id="addMonth" value="Add a task">
+            </div>
+
+
+            <div class="weekly_goals">
+                <h2 class="goals">Weekly goals</h2>
+                <hr class="division" />
+                <p id="currentWeek" class="week"></p>
+
+                <div id="weekItems">
+                    <template id="weekItemTemplate">
+                        <form class="weekItem">
+                            <label for="add-task-btn"></label>
+                            <input type="checkbox" class="item_completed">
+                            <input type="text" class="item_description" placeholder="task">
+                        </form>
+                    </template>
+                </div>
+                <input type="button" class="add" id="addWeek" value="Add a task">
+            </div>
+
+            <div class="daily_goals goals">
+                <h2 class="goals">Daily goals</h2>
+                <hr class="division">
+                <p id="currentDate" class="date"></p>
+
+                <div id="dateItems">
+                    <template id="dateItemTemplate">
+                        <form class="dateItem">
+                            <label for="add-task-btn"></label>
+                            <input type="checkbox" class="item_completed">
+                            <input type="text" class="item_description" placeholder="task">
+                        </form>
+                    </template>
+                </div>
+                <input type="button" class="add" id="addDate" value="Add a task">
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <div class="bible_verse">
+                <h2>Bible verse of the day</h2>
+            </div>
+            <p class="rights">&copy;2023 ToDo-things</p>
+        </footer>
+
+    </div>
+</body>
+
+<script src="todoist.js"></script>
+
+</html>
